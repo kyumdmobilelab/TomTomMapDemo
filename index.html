@@ -11,18 +11,11 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
-    <h1>TomTom Map Demo</h1>
+    <h2>TomTom Map Demo</h2>
     <div id='map'></div>
-    <script>
-        tomtom.L.map('map', {
-            key: '31clhs60n6V7KlAD0Hx41c4qdfgwkEsn'
-        });
-        // Alternatively following constructions are available:
-        // tomtom.key('<your-tomtom-API-key>');
-        // var map = L.map('map');
-        // var map = tomtom.map('map');
-        // var map = new tomtom.Map('map');
-        // var map = new L.Map('map');
-    </script>
+    <div id="panel">
+        <button type="button" onclick="gotoMyLocation()" style="float:right;">Go to My Location</button>
+    </div>
 </body>
+    <script src='app.js'></script>
 </html>

@@ -3,3 +3,10 @@
     height: 600px;
     border: 1px solid #6C6C6C;
 }
+
+#panel {
+    clear: both;
+    width: 1000px;
+    height: 80px;
+    margin-top: 5px;
+}
