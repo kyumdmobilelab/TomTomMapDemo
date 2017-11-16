@@ -1,7 +1,7 @@
 // app.js
 
 // TomTom Map
-tomtom.L.map('map', {
+var map = tomtom.L.map('map', {
     key: '31clhs60n6V7KlAD0Hx41c4qdfgwkEsn'
 });
 // Alternatively following constructions are available:
@@ -10,6 +10,17 @@ tomtom.L.map('map', {
 // var map = tomtom.map('map');
 // var map = new tomtom.Map('map');
 // var map = new L.Map('map');
+
+var languageLabel = L.DomUtil.create('label');
+languageLabel.innerHTML = 'Maps language';
+var languageSelector = tomtom.languageSelector.getHtmlElement(tomtom.globalLocaleService, 'maps');
+languageLabel.appendChild(languageSelector);
+tomtom.controlPanel({
+    position: 'bottomright',
+    title: 'Settings',
+    collapsed: true,
+    closeOnMapClick: false
+}).addTo(map).addContent(languageLabel);
 
 
 //------------------------------------------------------------
