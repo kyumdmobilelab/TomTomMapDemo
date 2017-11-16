@@ -1,2 +1,2 @@
-js/sdk/* linguist-vendored
-js/sdk-vector/* linguist-vendored
+sdk/* linguist-vendored
+sdk-vector/* linguist-vendored
